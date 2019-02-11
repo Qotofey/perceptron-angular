@@ -1,0 +1,7 @@
+::ng-deep .mat-figure {
+  display: block!important;
+}
+
+::ng-deep .mat-list-base {
+  padding-top: 0!important;
+}
