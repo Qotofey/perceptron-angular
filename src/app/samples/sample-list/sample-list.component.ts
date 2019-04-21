@@ -10,6 +10,8 @@ export class SampleListComponent implements OnInit {
 
   public sampleList: ISample[] = [];
 
+  private _chosenSample: ISample = null;
+
   constructor(
     private _sampleListService: SampleService
   ) { }
@@ -27,7 +29,8 @@ export class SampleListComponent implements OnInit {
   }
 
   public setSample(sample: ISample) {
-    this._sampleListService.$sample.next(sample);
+    this._chosenSample = (!this._chosenSample || this._chosenSample.answer.id !== sample.answer.id) ? sample : null;
+    this._sampleListService.$sample.next(this._chosenSample);
   }
 
 }

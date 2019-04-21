@@ -26,8 +26,13 @@ body {
 
 .navbar {
   padding: 0 5px 5px 5px;
-  max-width: 25%;
+  max-width: calc(25% - 10px);
   background-color: $background-white;
+}
+
+.content {
+   max-width: calc(50% - 20px);
+   padding: 0 10px 5px 10px;
 }
 
 @import "./text/text_accent.scss";
