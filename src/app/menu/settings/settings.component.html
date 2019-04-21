@@ -1,0 +1,15 @@
+<div class="text_accent">
+  Свойства ИНС
+</div>
+<mat-form-field class="settings-item">
+  <mat-select [(ngModel)]="layersCount" placeholder="Количество слоёв">
+    <mat-option *ngFor="let layerOption of layers" [value]="layerOption">
+      {{ layerOption }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field class="settings-item">
+    <input type="text" matInput placeholder="Коэффциент обучения">
+</mat-form-field>
+<p>Время выполнения эпохи: 0</p>
+<p>Текущая ошибка сети: 0</p>

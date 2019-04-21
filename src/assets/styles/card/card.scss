@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-white;
+  width: 25%;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  &:not(:last-child) {
+    border-bottom: 1px solid $background-grey;
+  }
+}
+
+.card-item_marged {
+  margin-bottom: auto;
+  flex-grow: 1;
+}

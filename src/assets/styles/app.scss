@@ -1,0 +1,32 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$background-grey: #eeeeee;
+$background-white: #ffffff;
+$main-color: #009688;
+$main-black: #212121;
+$font-color-grey: #adadad;
+$font-color-accent: #009688;
+$font-color-white: #ffffff;
+$font-color-black: #212121;
+
+body {
+  background-color: $background-grey;
+  color: $font-color-grey;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100% - 3em);
+}
+
+@import "./text/text_accent.scss";
+@import "./text/text_title.scss";
+@import "./header/header.scss";
+@import "./sets/sets.scss";
+@import "./card/card.scss";
+@import "./settings/settings.scss";

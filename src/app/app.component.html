@@ -1,31 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <span>Добро пожаловать на проект {{ title }}!</span>
-</mat-toolbar>
+<app-header>
 
-<!--<mat-grid-list cols="4" rowHeight="100px">-->
-  <!--<mat-grid-tile-->
-    <!--*ngFor="let tile of tiles"-->
-    <!--[colspan]="tile.cols"-->
-    <!--[rowspan]="tile.rows"-->
-    <!--[style.background]="tile.color">-->
-    <!--{{tile.text}}-->
-  <!--</mat-grid-tile>-->
-<!--</mat-grid-list>-->
-
-<!--<app-samples></app-samples>-->
-
-<mat-grid-list cols="4" rowHeight="23vh">
-  <mat-grid-tile [colspan]="1" [rowspan]="4">
-    <app-samples></app-samples>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="3" [rowspan]="3" style="background-color: lightpink">
-    content
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="3" [rowspan]="1" style="background-color: #DDBDF1">
-    help
-  </mat-grid-tile>
-
-</mat-grid-list>
-
-<router-outlet></router-outlet>
+</app-header>
+<div class="main">
+  <div class="card">
+    <div class="card-item">
+      <app-sets></app-sets>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-item card-item_marged">
+      <app-reference></app-reference>
+    </div>
+    <div class="card-item">
+      <app-settings></app-settings>
+    </div>
+    <div class="card-item">
+      <button class="settings-button" mat-raised-button>Формировать ИНС</button>
+      <button class="settings-button" mat-raised-button>Обучить ИНС</button>
+      <button class="settings-button" mat-raised-button>Тестировать ИНС</button>
+      <button class="settings-button" mat-raised-button>Завершить работу</button>
+    </div>
+  </div>
+</div>
