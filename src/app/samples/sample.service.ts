@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, from, combineLatest } from 'rxjs';
+import { Observable, from, combineLatest, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { QuestionService } from '../questions/question.service';
@@ -11,6 +11,8 @@ import { ISample } from './sample.model';
   providedIn: 'root'
 })
 export class SampleService {
+
+  public $sample: Subject<ISample> = new Subject();
 
   constructor(
     private _http: HttpClient,
@@ -31,7 +33,7 @@ export class SampleService {
             });
             return {
               answer: answer,
-              questions: relyQuestions
+              questionList: relyQuestions
             } as ISample;
           });
           return samples;

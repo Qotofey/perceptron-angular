@@ -16,11 +16,18 @@ export class SampleListComponent implements OnInit {
 
   ngOnInit() {
     this._sampleListService.getSampleList().subscribe({
-      next: data => {
-        console.log(data);
-        this.sampleList = data;
+      next: samples => {
+        this.sampleList = samples;
+
+        if (this.sampleList.length) {
+          this.setSample(this.sampleList[0]);
+        }
       }
     });
+  }
+
+  public setSample(sample: ISample) {
+    this._sampleListService.$sample.next(sample);
   }
 
 }

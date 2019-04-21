@@ -1,0 +1,14 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.menu-item {
+    padding-top: 5px;
+}
+
+.menu-item:nth-child(1) {
+    margin-bottom: auto;
+}

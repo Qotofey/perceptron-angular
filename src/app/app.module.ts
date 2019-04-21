@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { MenuComponent } from './menu/menu.component';
 import { ReferenceComponent } from './menu/reference/reference.component';
 import { SettingsComponent } from './menu/settings/settings.component';
 
@@ -21,11 +22,17 @@ import {
   MatInputModule,
   MatFormFieldModule,
   MatButtonModule,
+  MatCardModule,
+  MatListModule,
+  MatButtonToggleModule,
+  MatIconModule,
+
 } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MenuComponent,
     ReferenceComponent,
     SettingsComponent,
     QuestionListComponent,
@@ -34,18 +41,23 @@ import {
     SampleItemComponent,
     SampleListComponent,
     QuestionItemComponent,
-    QuestionListComponent
+    QuestionListComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     MatSelectModule,
     MatOptionModule,
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    FormsModule,
-    HttpClientModule
+    MatCardModule,
+    MatListModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

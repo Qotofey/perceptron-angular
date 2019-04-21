@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ISample } from '../sample.model';
+import { SampleService } from '../sample.service';
 
 @Component({
   selector: 'app-sample-item',
@@ -6,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SampleItemComponent implements OnInit {
 
-  constructor() { }
+  sample: ISample;
+
+  constructor(
+    private _sampleService: SampleService,
+  ) { }
 
   ngOnInit() {
+    this._sampleService.$sample.subscribe({
+      next: sample => {
+        this.sample = sample;
+      }
+    });
   }
 
 }

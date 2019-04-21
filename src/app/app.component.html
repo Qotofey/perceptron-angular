@@ -2,23 +2,11 @@
 
 </app-header>
 <div class="main">
-  <div class="card">
-    <div class="card-item">
-      <app-sample-list></app-sample-list>
-    </div>
+  <div class="navbar">
+    <app-sample-list></app-sample-list>
   </div>
-  <div class="card">
-    <div class="card-item card-item_marged">
-      <app-reference></app-reference>
-    </div>
-    <div class="card-item">
-      <app-settings></app-settings>
-    </div>
-    <div class="card-item">
-      <button class="settings-button" mat-raised-button>Формировать ИНС</button>
-      <button class="settings-button" mat-raised-button>Обучить ИНС</button>
-      <button class="settings-button" mat-raised-button>Тестировать ИНС</button>
-      <button class="settings-button" mat-raised-button>Завершить работу</button>
-    </div>
+  <app-sample-item></app-sample-item>
+  <div class="navbar">
+    <app-menu></app-menu>
   </div>
 </div>

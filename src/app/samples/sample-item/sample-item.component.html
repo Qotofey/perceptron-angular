@@ -1,3 +1,24 @@
-<p>
-  sample works!
-</p>
+<ng-container *ngIf="sample">
+  <h4>Обучающая выборка</h4>
+  <mat-card>
+    <mat-card-subtitle>Ответ</mat-card-subtitle>
+    <mat-card-content>{{ sample.answer.text }}<button mat-button><mat-icon>delete</mat-icon></button></mat-card-content>
+  </mat-card>
+  <br>
+  <mat-card>
+    <mat-card-subtitle> Вопросы</mat-card-subtitle>
+    <mat-card-content>
+      <mat-list *ngFor="let question of sample.questionList">
+        <mat-list-item>
+          {{ question.text }}
+          <button mat-button><mat-icon>delete</mat-icon></button>
+        
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+      
+  </mat-card>
+
+</ng-container>
+
+<button mat-fab><mat-icon>add</mat-icon></button>

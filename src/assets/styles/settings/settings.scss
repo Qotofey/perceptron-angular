@@ -5,6 +5,8 @@
 }
 
 .settings-button {
+  width: 100%;
+  color: $font-color-white;
   background-color: $main-color;
   &:not(:last-child) {
     margin-bottom: 5px;

@@ -1,11 +1,15 @@
-<div
-  *ngFor="let sample of sampleList"
-  class="sample"
->
-  <div class="sample__question">
-    {{ sample.questionList[0]?.text }}
-  </div>
-  <div class="sample__answer">
-    {{ sample.answer?.text }}
-  </div>
-</div>
+<mat-action-list>
+  <button
+    *ngFor="let sample of sampleList"
+    class="sample-list"
+    (click)="setSample(sample)"
+    mat-button
+  >
+    <div class="sample-list__question">
+      {{ sample.questionList[0]?.text }}
+    </div>
+    <div class="sample-list__answer">
+      {{ sample.answer?.text }}
+    </div>
+  </button>
+</mat-action-list>

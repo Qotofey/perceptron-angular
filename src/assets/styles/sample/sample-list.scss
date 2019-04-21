@@ -1,0 +1,26 @@
+.sample-list {
+  display: flex !important;
+  flex-direction: column;
+  width: 100% !important;
+  overflow: hidden !important;
+  text-align: left !important;
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+  line-height: 1.2em !important;
+  white-space: normal !important;
+  border-radius: 0 !important;
+}
+
+.sample-list__question {
+  color: $font-color-black !important;
+  max-height: 2.4em !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.sample-list__answer {
+  color: $font-color-grey;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-height: 2.4em !important;
+}
