@@ -1,0 +1,11 @@
+<div
+  *ngFor="let sample of sampleList"
+  class="sample"
+>
+  <div class="sample__question">
+    {{ sample.questionList[0]?.text }}
+  </div>
+  <div class="sample__answer">
+    {{ sample.answer?.text }}
+  </div>
+</div>

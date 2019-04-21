@@ -2,15 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ReferenceComponent } from './menu/reference/reference.component';
 import { SettingsComponent } from './menu/settings/settings.component';
 
-import { AnswerComponent } from './questions/answer/answer.component';
-import { QuestionsListComponent } from './questions/questions-list/questions-list.component';
 import { HeaderComponent } from './header/header.component';
-import { SetsComponent } from './sets/sets.component';
+import { AnswerComponent } from './answer/answer.component';
+import { SampleItemComponent } from './samples/sample-item/sample-item.component';
+import { SampleListComponent } from './samples/sample-list/sample-list.component';
+import { QuestionItemComponent } from './questions/question-item/question-item.component';
+import { QuestionListComponent } from './questions/question-list/question-list.component';
 
 import {
   MatSelectModule,
@@ -25,10 +28,13 @@ import {
     AppComponent,
     ReferenceComponent,
     SettingsComponent,
-    AnswerComponent,
-    QuestionsListComponent,
+    QuestionListComponent,
     HeaderComponent,
-    SetsComponent,
+    AnswerComponent,
+    SampleItemComponent,
+    SampleListComponent,
+    QuestionItemComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +45,7 @@ import {
     MatFormFieldModule,
     MatButtonModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
